@@ -13,6 +13,9 @@
 		D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC92D5C300900E5C85B /* RecipezApp.swift */; };
 		D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */; };
 		D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC82D5C300900E5C85B /* Assets.xcassets */; };
+		D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */; };
+		D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */; };
+		D35AFFD92D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		D35AFFC62D5C300900E5C85B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D35AFFC82D5C300900E5C85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35AFFC92D5C300900E5C85B /* RecipezApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipezApp.swift; sourceTree = "<group>"; };
+		D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
+		D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular-VariableFont_opsz.ttf"; sourceTree = "<group>"; };
+		D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		D35AFFBF2D5C300900E5C85B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -98,11 +105,21 @@
 				D35AFFC52D5C300900E5C85B /* ViewModels */,
 				D35AFFC72D5C300900E5C85B /* Views */,
 				D35AFFBF2D5C300900E5C85B /* Components */,
+				D35AFFD32D5C5C7D00E5C85B /* Fonts */,
 				D35AFFC82D5C300900E5C85B /* Assets.xcassets */,
 				D35AFFC92D5C300900E5C85B /* RecipezApp.swift */,
 				D35AFFC32D5C300900E5C85B /* Preview Content */,
 			);
 			path = Recipez;
+			sourceTree = "<group>";
+		};
+		D35AFFD32D5C5C7D00E5C85B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */,
+				D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf in Resources */,
 				D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */,
+				D35AFFD92D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf in Resources */,
 				D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */,
+				D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
 				D35AFFCD2D5C300900E5C85B /* ListView.swift in Sources */,
 				D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */,

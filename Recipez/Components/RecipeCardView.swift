@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct RecipeCardView: View {
+	
+	let recipe = Recipe.example
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ZStack {
+			VStack(alignment: .leading) {
+				Text(recipe.name)
+				Text(recipe.cuisine)
+			}
+		}
     }
 }
 
