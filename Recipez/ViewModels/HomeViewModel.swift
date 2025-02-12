@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class HomeViewModel: ObservableObject {
 	
 	@Published var recipes: [Recipe] = []
@@ -16,7 +17,8 @@ class HomeViewModel: ObservableObject {
 	
 	func fetchRecipes() async {
 		do {
-			self.recipes = try await recipeDataService.getRecipes()
+			let fetchedRecipes = try await recipeDataService.getRecipes()
+			self.recipes = fetchedRecipes
 		} catch {
 			self.errorMessage = "Error loading recipes"
 		}
