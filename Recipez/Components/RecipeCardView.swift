@@ -27,8 +27,9 @@ struct RecipeCardView: View {
 // MARK: - UI
 
 extension RecipeCardView {
+	
 	private var recipeImage: some View {
-		AsyncImage(url: URL(string: recipe.photoURLLarge)) { phase in
+		AsyncImage(url: URL(string: "fdjskflj")) { phase in
 			switch phase {
 			case .empty:
 				ProgressView()
@@ -39,7 +40,7 @@ extension RecipeCardView {
 					.scaledToFill()
 					.cornerRadius(20)
 			case .failure(let error):
-				Text("Failed to load image")
+				imagePlaceholder
 					.onAppear {
 						print("Error loading image: \(error.localizedDescription)")
 					}
@@ -66,5 +67,16 @@ extension RecipeCardView {
 		.background(Color.theme.colorAccentYellow)
 		.frame(maxWidth: 350, alignment: .leading)
 		.fixedSize(horizontal: false, vertical: true)
+	}
+	
+	private var imagePlaceholder: some View {
+		ZStack(alignment: .center) {
+			RoundedRectangle(cornerRadius: 20, style: .continuous)
+				.fill(Color.black.opacity(0.1))
+				.frame(width: 350, height: 350)
+			Text("Error loading image")
+				.font(.inter(.bold, size: 20))
+				.foregroundStyle(Color.black.opacity(0.25))
+		}
 	}
 }
