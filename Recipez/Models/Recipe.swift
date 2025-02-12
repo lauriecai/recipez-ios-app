@@ -43,8 +43,8 @@
  */
 
 struct Recipe: Identifiable, Codable {
-	let id, name, cuisine: String
-	let photoURLLarge, photoURLSmall: String?
+	let id, name, cuisine, photoURLLarge: String
+	let photoURLSmall: String?
 	let sourceURL: String?
 	let youtubeURL: String?
 	
