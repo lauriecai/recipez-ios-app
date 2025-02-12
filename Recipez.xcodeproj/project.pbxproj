@@ -17,6 +17,7 @@
 		D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */; };
 		D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */; };
 		D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFDB2D5C5E9600E5C85B /* Font.swift */; };
+		D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE02D5C754F00E5C85B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Variable.ttf"; sourceTree = "<group>"; };
 		D35AFFDB2D5C5E9600E5C85B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D35AFFDD2D5C66BF00E5C85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35AFFE02D5C754F00E5C85B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D35AFFDB2D5C5E9600E5C85B /* Font.swift */,
+				D35AFFE02D5C754F00E5C85B /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */,
 				D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */,
+				D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */,
 				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
 				D35AFFCD2D5C300900E5C85B /* ListView.swift in Sources */,
