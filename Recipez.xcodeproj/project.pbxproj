@@ -14,8 +14,9 @@
 		D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */; };
 		D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC82D5C300900E5C85B /* Assets.xcassets */; };
 		D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */; };
-		D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */; };
-		D35AFFD92D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */; };
+		D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */; };
+		D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */; };
+		D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFDB2D5C5E9600E5C85B /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,10 @@
 		D35AFFC82D5C300900E5C85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35AFFC92D5C300900E5C85B /* RecipezApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipezApp.swift; sourceTree = "<group>"; };
 		D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
-		D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular-VariableFont_opsz.ttf"; sourceTree = "<group>"; };
-		D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
+		D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
+		D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Variable.ttf"; sourceTree = "<group>"; };
+		D35AFFDB2D5C5E9600E5C85B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		D35AFFDD2D5C66BF00E5C85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +104,15 @@
 		D35AFFCA2D5C300900E5C85B /* Recipez */ = {
 			isa = PBXGroup;
 			children = (
+				D35AFFC92D5C300900E5C85B /* RecipezApp.swift */,
+				D35AFFDA2D5C5E8600E5C85B /* Extensions */,
 				D35AFFC12D5C300900E5C85B /* Models */,
 				D35AFFC52D5C300900E5C85B /* ViewModels */,
 				D35AFFC72D5C300900E5C85B /* Views */,
 				D35AFFBF2D5C300900E5C85B /* Components */,
 				D35AFFD32D5C5C7D00E5C85B /* Fonts */,
 				D35AFFC82D5C300900E5C85B /* Assets.xcassets */,
-				D35AFFC92D5C300900E5C85B /* RecipezApp.swift */,
+				D35AFFDD2D5C66BF00E5C85B /* Info.plist */,
 				D35AFFC32D5C300900E5C85B /* Preview Content */,
 			);
 			path = Recipez;
@@ -116,10 +121,18 @@
 		D35AFFD32D5C5C7D00E5C85B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D35AFFD82D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf */,
-				D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf */,
+				D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */,
+				D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D35AFFDA2D5C5E8600E5C85B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D35AFFDB2D5C5E9600E5C85B /* Font.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular-VariableFont_opsz.ttf in Resources */,
+				D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular.ttf in Resources */,
 				D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */,
-				D35AFFD92D5C5D9B00E5C85B /* Inter-VariableFont_opsz,wght.ttf in Resources */,
+				D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */,
 				D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +212,7 @@
 			files = (
 				D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */,
 				D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */,
+				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
 				D35AFFCD2D5C300900E5C85B /* ListView.swift in Sources */,
 				D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */,
@@ -338,11 +352,13 @@
 				DEVELOPMENT_TEAM = 7YPJCXPNAH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipez/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,11 +387,13 @@
 				DEVELOPMENT_TEAM = 7YPJCXPNAH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipez/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

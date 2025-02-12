@@ -15,7 +15,9 @@ struct RecipeCardView: View {
 		ZStack {
 			VStack(alignment: .leading) {
 				Text(recipe.name)
+					.font(.jaro(size: 24))
 				Text(recipe.cuisine)
+					.font(.inter(.bold, size: 16))
 			}
 		}
     }
