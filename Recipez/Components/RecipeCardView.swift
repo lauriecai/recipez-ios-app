@@ -72,7 +72,7 @@ extension RecipeCardView {
 	private var imagePlaceholder: some View {
 		ZStack(alignment: .center) {
 			RoundedRectangle(cornerRadius: 20, style: .continuous)
-				.fill(Color.black.opacity(0.1))
+				.fill(Color.black.opacity(0.08))
 				.frame(width: 350, height: 350)
 			Text("Error loading image")
 				.font(.inter(.bold, size: 20))

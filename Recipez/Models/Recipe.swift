@@ -43,18 +43,18 @@
  */
 
 struct Recipe: Identifiable, Codable {
-	let id, name, cuisine, photoURLLarge: String
-	let photoURLSmall: String?
-	let sourceURL: String?
-	let youtubeURL: String?
+	let id, name, cuisine, photoUrlLarge: String
+	let photoUrlSmall: String?
+	let sourceUrl: String?
+	let youtubeUrl: String?
 	
 	enum CodingKeys: String, CodingKey {
 		case id, name, cuisine
-		case photoURLLarge = "photo_url_large"
-		case photoURLSmall = "photo_url_small"
-		case sourceURL = "source_url"
-		case youtubeURL = "youtube_url"
+		case photoUrlLarge = "photo_url_large"
+		case photoUrlSmall = "photo_url_small"
+		case sourceUrl = "source_url"
+		case youtubeUrl = "youtube_url"
 	}
 	
-	static let example = Recipe(id: "1", name: "Peking Duck", cuisine: "Chinese", photoURLLarge: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nfaPwEk8lGpdK3l0ZZYMmw.jpeg", photoURLSmall: nil, sourceURL: nil, youtubeURL: nil)
+	static let example = Recipe(id: "1", name: "Peking Duck", cuisine: "Chinese", photoUrlLarge: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nfaPwEk8lGpdK3l0ZZYMmw.jpeg", photoUrlSmall: nil, sourceUrl: nil, youtubeUrl: nil)
 }
