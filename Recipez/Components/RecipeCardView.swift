@@ -64,5 +64,7 @@ extension RecipeCardView {
 		.padding(.horizontal, 20)
 		.padding(.vertical, 8)
 		.background(Color.theme.colorAccentYellow)
+		.frame(maxWidth: 350, alignment: .leading)
+		.fixedSize(horizontal: false, vertical: true)
 	}
 }
