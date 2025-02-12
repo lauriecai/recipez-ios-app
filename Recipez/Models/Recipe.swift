@@ -42,6 +42,14 @@
  ]}
  */
 
+struct AllRecipes: Codable {
+	let recipes: [Recipe]
+	
+	enum CodingKeys: String, CodingKey {
+		case recipes
+	}
+}
+
 struct Recipe: Identifiable, Codable {
 	let id, name, cuisine, photoUrlLarge: String
 	let photoUrlSmall: String?
@@ -49,7 +57,8 @@ struct Recipe: Identifiable, Codable {
 	let youtubeUrl: String?
 	
 	enum CodingKeys: String, CodingKey {
-		case id, name, cuisine
+		case name, cuisine
+		case id = "uuid"
 		case photoUrlLarge = "photo_url_large"
 		case photoUrlSmall = "photo_url_small"
 		case sourceUrl = "source_url"

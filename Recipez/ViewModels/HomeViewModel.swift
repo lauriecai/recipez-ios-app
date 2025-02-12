@@ -9,7 +9,7 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
 	
-	@Published var recipes: [Recipe]? = nil
+	@Published var recipes: [Recipe] = []
 	@Published var errorMessage: String? = nil
 	
 	private let recipeDataService = RecipeDataService()
