@@ -8,12 +8,30 @@
 import Foundation
 
 class RecipeDataService {
+	
 	let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
-
+	
 	func getRecipes() async throws -> [Recipe] {
 		do {
-			guard let url = URL(string: urlString) else { throw URLError(.badURL)}
+			// ensure valid url
+			guard let url = URL(string: urlString)
+			else {
+				throw URLError(.badURL)
+			}
+			
+			// fetch data from url
 			let (data, response) = try await URLSession.shared.data(from: url)
+			
+			// validate data and response
+			guard
+				!data.isEmpty,
+				let httpResponse = response as? HTTPURLResponse,
+				httpResponse.statusCode >= 200 && httpResponse.statusCode < 300
+			else {
+				throw URLError(.badServerResponse)
+			}
+			
+			// decode data into recipes array
 			let recipes = try JSONDecoder().decode([Recipe].self, from: data)
 			return recipes
 		} catch {
