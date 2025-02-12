@@ -55,4 +55,6 @@ struct Recipe: Identifiable, Codable {
 		case sourceURL = "source_url"
 		case youtubeURL = "youtube_url"
 	}
+	
+	static let example = Recipe(id: "1", name: "Peking Duck", cuisine: "Chinese", photoURLLarge: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nfaPwEk8lGpdK3l0ZZYMmw.jpeg", photoURLSmall: nil, sourceURL: nil, youtubeURL: nil)
 }
