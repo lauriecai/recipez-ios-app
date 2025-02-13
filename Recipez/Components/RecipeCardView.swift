@@ -17,7 +17,6 @@ struct RecipeCardView: View {
 			recipeLabel
 				.padding(.bottom, 30)
 		}
-		.padding(10)
     }
 }
 
@@ -57,6 +56,7 @@ extension RecipeCardView {
 		VStack(alignment: .leading, spacing: 5) {
 			Text(recipe.name)
 				.font(.jaro(size: 18))
+				.foregroundStyle(Color.theme.colorTextPrimary)
 			HStack(spacing: 8) {
 				Image("icon-location")
 					.renderingMode(.template)
