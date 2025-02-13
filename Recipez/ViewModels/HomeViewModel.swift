@@ -13,11 +13,9 @@ class HomeViewModel: ObservableObject {
 	@Published var recipes: [Recipe] = []
 	@Published var errorMessage: String? = nil
 	
-	private let recipeDataService = RecipeDataService()
-	
 	func fetchRecipes() async {
 		do {
-			let fetchedRecipes = try await recipeDataService.getRecipes()
+			let fetchedRecipes = try await RecipeDataService.shared.getRecipes()
 			self.recipes = fetchedRecipes
 		} catch {
 			self.errorMessage = "Error loading recipes"

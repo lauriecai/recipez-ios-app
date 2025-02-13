@@ -9,6 +9,8 @@ import Foundation
 
 class RecipeDataService {
 	
+	static let shared = RecipeDataService()
+	
 	let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
 	
 	func getRecipes() async throws -> [Recipe] {
