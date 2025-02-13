@@ -4,8 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
-		<string></string>
+		<string>Inter-Variable.ttf</string>
+		<string>Jaro-Regular.ttf</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>
