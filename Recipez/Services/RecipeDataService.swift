@@ -33,7 +33,6 @@ class RecipeDataService {
 			
 			// decode data into recipes array
 			let recipesData = try JSONDecoder().decode(AllRecipes.self, from: data)
-			print(recipesData.recipes[0])
 			return recipesData.recipes
 		} catch {
 			print("Error fetching recipes: \(error.localizedDescription)")

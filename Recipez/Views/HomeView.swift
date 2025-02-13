@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
+	
+	@StateObject private var viewModel = HomeViewModel()
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ScrollView(showsIndicators: false) {
+			VStack(spacing: 5) {
+				ForEach(viewModel.recipes) { recipe in
+					RecipeCardView(recipe: recipe)
+				}
+			}
+			.onAppear {
+				Task {
+					await viewModel.fetchRecipes()
+				}
+			}
+		}
     }
 }
 

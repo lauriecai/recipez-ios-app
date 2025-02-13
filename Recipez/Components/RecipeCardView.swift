@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeCardView: View {
 	
-	let recipe = Recipe.example
+	let recipe: Recipe
 	
     var body: some View {
 		ZStack(alignment: .bottomLeading) {
@@ -17,11 +17,12 @@ struct RecipeCardView: View {
 			recipeLabel
 				.padding(.bottom, 30)
 		}
+		.padding(10)
     }
 }
 
 #Preview {
-    RecipeCardView()
+	RecipeCardView(recipe: Recipe.example)
 }
 
 // MARK: - UI
@@ -29,21 +30,23 @@ struct RecipeCardView: View {
 extension RecipeCardView {
 	
 	private var recipeImage: some View {
-		AsyncImage(url: URL(string: "fdjskflj")) { phase in
+		AsyncImage(url: URL(string: recipe.photoUrlLarge)) { phase in
 			switch phase {
 			case .empty:
-				ProgressView()
+				imagePlaceholder
 			case .success(let image):
 				image
 					.resizable()
-					.frame(width: 350, height: 350, alignment: .center)
-					.scaledToFill()
+					.aspectRatio(1, contentMode: .fit)
+					.frame(maxWidth: .infinity)
 					.cornerRadius(20)
-			case .failure(let error):
-				imagePlaceholder
-					.onAppear {
-						print("Error loading image: \(error.localizedDescription)")
-					}
+			case .failure(_):
+				ZStack(alignment: .center) {
+					imagePlaceholder
+					Text("Error loading image")
+						.font(.inter(.bold, size: 20))
+						.foregroundStyle(Color.black.opacity(0.25))
+				}
 			@unknown default:
 				EmptyView()
 			}
@@ -70,13 +73,8 @@ extension RecipeCardView {
 	}
 	
 	private var imagePlaceholder: some View {
-		ZStack(alignment: .center) {
-			RoundedRectangle(cornerRadius: 20, style: .continuous)
-				.fill(Color.black.opacity(0.08))
-				.frame(width: 350, height: 350)
-			Text("Error loading image")
-				.font(.inter(.bold, size: 20))
-				.foregroundStyle(Color.black.opacity(0.25))
-		}
+		RoundedRectangle(cornerRadius: 20, style: .continuous)
+			.fill(Color.black.opacity(0.08))
+			.frame(width: 350, height: 350)
 	}
 }

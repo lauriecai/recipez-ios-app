@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC02D5C300900E5C85B /* Recipe.swift */; };
 		D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC42D5C300900E5C85B /* HomeViewModel.swift */; };
-		D35AFFCD2D5C300900E5C85B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC62D5C300900E5C85B /* ListView.swift */; };
 		D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC92D5C300900E5C85B /* RecipezApp.swift */; };
 		D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */; };
 		D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFC82D5C300900E5C85B /* Assets.xcassets */; };
 		D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */; };
-		D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */; };
 		D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */; };
 		D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFDB2D5C5E9600E5C85B /* Font.swift */; };
 		D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE02D5C754F00E5C85B /* Color.swift */; };
 		D35AFFE42D5D34AA00E5C85B /* RecipeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE32D5D34AA00E5C85B /* RecipeDataService.swift */; };
+		D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE52D5D5DD700E5C85B /* HomeView.swift */; };
+		D35AFFE82D5D6CA100E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,16 +26,16 @@
 		D35AFFC02D5C300900E5C85B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D35AFFC42D5C300900E5C85B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		D35AFFC62D5C300900E5C85B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D35AFFC82D5C300900E5C85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35AFFC92D5C300900E5C85B /* RecipezApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipezApp.swift; sourceTree = "<group>"; };
 		D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
-		D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
 		D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Variable.ttf"; sourceTree = "<group>"; };
 		D35AFFDB2D5C5E9600E5C85B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D35AFFDD2D5C66BF00E5C85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35AFFE02D5C754F00E5C85B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D35AFFE32D5D34AA00E5C85B /* RecipeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataService.swift; sourceTree = "<group>"; };
+		D35AFFE52D5D5DD700E5C85B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		D35AFFC72D5C300900E5C85B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D35AFFC62D5C300900E5C85B /* ListView.swift */,
+				D35AFFE52D5D5DD700E5C85B /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */,
-				D35AFFD62D5C5D8E00E5C85B /* Jaro-Regular.ttf */,
+				D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -210,10 +210,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35AFFD72D5C5D8E00E5C85B /* Jaro-Regular.ttf in Resources */,
 				D35AFFCF2D5C300900E5C85B /* Preview Assets.xcassets in Resources */,
 				D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */,
 				D35AFFD02D5C300900E5C85B /* Assets.xcassets in Resources */,
+				D35AFFE82D5D6CA100E5C85B /* Jaro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +229,8 @@
 				D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */,
 				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
+				D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */,
 				D35AFFE42D5D34AA00E5C85B /* RecipeDataService.swift in Sources */,
-				D35AFFCD2D5C300900E5C85B /* ListView.swift in Sources */,
 				D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +374,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,7 +409,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
