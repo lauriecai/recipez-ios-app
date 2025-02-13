@@ -27,7 +27,7 @@
 		D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D35AFFC42D5C300900E5C85B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D35AFFC82D5C300900E5C85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D35AFFC92D5C300900E5C85B /* RecipezApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipezApp.swift; sourceTree = "<group>"; };
+		D35AFFC92D5C300900E5C85B /* RecipezApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipezApp.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Variable.ttf"; sourceTree = "<group>"; };
 		D35AFFDB2D5C5E9600E5C85B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };

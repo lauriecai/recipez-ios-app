@@ -9,13 +9,17 @@ import SwiftUI
 
 struct RecipeCardView: View {
 	
+	@State private var imageLoaded: Bool = false
+	
 	let recipe: Recipe
 	
     var body: some View {
 		ZStack(alignment: .bottomLeading) {
 			recipeImage
-			recipeLabel
-				.padding(.bottom, 30)
+			if imageLoaded {
+				recipeLabel
+					.padding(.bottom, 30)
+			}
 		}
     }
 }
@@ -39,6 +43,9 @@ extension RecipeCardView {
 					.aspectRatio(1, contentMode: .fit)
 					.frame(maxWidth: .infinity)
 					.cornerRadius(20)
+					.onAppear {
+						imageLoaded = true
+					}
 			case .failure(_):
 				ZStack(alignment: .center) {
 					imagePlaceholder
