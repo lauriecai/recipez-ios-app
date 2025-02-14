@@ -14,13 +14,9 @@ struct HomeView: View {
 	var body: some View {
 		NavigationView {
 			ScrollView(showsIndicators: false) {
-				Image("image-background-cover")
-					.resizable()
-					.frame(maxWidth: .infinity)
-					.aspectRatio(contentMode: .fit)
 				recipesList
 			}
-			.background(Color.white).ignoresSafeArea()
+			.background(Color.white)
 			.navigationTitle("All Recipes")
 		}
 	}

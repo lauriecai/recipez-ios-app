@@ -1,5 +1,5 @@
 //
-//  RecipeDataService.swift
+//  RecipeManager.swift
 //  Recipez
 //
 //  Created by Laurie Cai on 2/12/25.
@@ -7,14 +7,11 @@
 
 import Foundation
 
-class RecipeDataService {
+class RecipeManager {
 	
-	static let shared = RecipeDataService()
-	private init() {}
+	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
 	
-	let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
-	
-	func getRecipes() async throws -> [Recipe] {
+	static func getRecipes() async throws -> [Recipe] {
 		do {
 			// ensure valid url
 			guard let url = URL(string: urlString)

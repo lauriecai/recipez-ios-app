@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D328A4392D5EA9A3008A8B84 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A4382D5EA9A3008A8B84 /* ImageCacheService.swift */; };
 		D328A43B2D5EDFB7008A8B84 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A43A2D5EDFB5008A8B84 /* Image.swift */; };
+		D328A43E2D5FB242008A8B84 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A43D2D5FB242008A8B84 /* ImageLoader.swift */; };
 		D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC02D5C300900E5C85B /* Recipe.swift */; };
 		D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC42D5C300900E5C85B /* HomeViewModel.swift */; };
 		D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC92D5C300900E5C85B /* RecipezApp.swift */; };
@@ -18,7 +19,7 @@
 		D35AFFD92D5C5D9B00E5C85B /* Inter-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFD82D5C5D9B00E5C85B /* Inter-Variable.ttf */; };
 		D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFDB2D5C5E9600E5C85B /* Font.swift */; };
 		D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE02D5C754F00E5C85B /* Color.swift */; };
-		D35AFFE42D5D34AA00E5C85B /* RecipeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE32D5D34AA00E5C85B /* RecipeDataService.swift */; };
+		D35AFFE42D5D34AA00E5C85B /* RecipesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE32D5D34AA00E5C85B /* RecipesManager.swift */; };
 		D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE52D5D5DD700E5C85B /* HomeView.swift */; };
 		D35AFFE82D5D6CA100E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		D328A4382D5EA9A3008A8B84 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		D328A43A2D5EDFB5008A8B84 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		D328A43D2D5FB242008A8B84 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		D35AFF9D2D5BCF5100E5C85B /* Recipez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35AFFC02D5C300900E5C85B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		D35AFFDB2D5C5E9600E5C85B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D35AFFDD2D5C66BF00E5C85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35AFFE02D5C754F00E5C85B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		D35AFFE32D5D34AA00E5C85B /* RecipeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataService.swift; sourceTree = "<group>"; };
+		D35AFFE32D5D34AA00E5C85B /* RecipesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesManager.swift; sourceTree = "<group>"; };
 		D35AFFE52D5D5DD700E5C85B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D328A43C2D5FB225008A8B84 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D35AFFE32D5D34AA00E5C85B /* RecipesManager.swift */,
+				D328A43D2D5FB242008A8B84 /* ImageLoader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D35AFF942D5BCF5100E5C85B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D35AFFC92D5C300900E5C85B /* RecipezApp.swift */,
+				D328A43C2D5FB225008A8B84 /* Utilities */,
 				D35AFFDA2D5C5E8600E5C85B /* Extensions */,
 				D35AFFC12D5C300900E5C85B /* Models */,
 				D35AFFE22D5D347200E5C85B /* Services */,
@@ -149,7 +161,6 @@
 		D35AFFE22D5D347200E5C85B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D35AFFE32D5D34AA00E5C85B /* RecipeDataService.swift */,
 				D328A4382D5EA9A3008A8B84 /* ImageCacheService.swift */,
 			);
 			path = Services;
@@ -235,8 +246,9 @@
 				D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */,
 				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
+				D328A43E2D5FB242008A8B84 /* ImageLoader.swift in Sources */,
 				D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */,
-				D35AFFE42D5D34AA00E5C85B /* RecipeDataService.swift in Sources */,
+				D35AFFE42D5D34AA00E5C85B /* RecipesManager.swift in Sources */,
 				D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */,
 				D328A4392D5EA9A3008A8B84 /* ImageCacheService.swift in Sources */,
 				D328A43B2D5EDFB7008A8B84 /* Image.swift in Sources */,
