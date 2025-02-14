@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RecipeCardView: View {
 	
@@ -33,12 +34,9 @@ struct RecipeCardView: View {
 extension RecipeCardView {
 	
 	private var recipeImage: some View {
-		AsyncImage(url: URL(string: recipe.photoUrlLarge)) { phase in
-			switch phase {
-			case .empty:
-				imagePlaceholder
-			case .success(let image):
-				image
+		Group {
+			if let cachedImage = ImageCacheService.shared.loadImage(id: recipe.id) {
+				Image(uiImage: cachedImage)
 					.resizable()
 					.aspectRatio(1, contentMode: .fit)
 					.frame(maxWidth: .infinity)
@@ -46,15 +44,34 @@ extension RecipeCardView {
 					.onAppear {
 						imageLoaded = true
 					}
-			case .failure(_):
-				ZStack(alignment: .center) {
-					imagePlaceholder
-					Text("Error loading image")
-						.font(.inter(.bold, size: 20))
-						.foregroundStyle(Color.black.opacity(0.25))
+			} else {
+				AsyncImage(url: URL(string: recipe.photoUrlLarge)) { phase in
+					switch phase {
+					case .empty:
+						imagePlaceholder
+					case .success(let image):
+						image
+							.resizable()
+							.aspectRatio(1, contentMode: .fit)
+							.frame(maxWidth: .infinity)
+							.cornerRadius(20)
+							.onAppear {
+								imageLoaded = true
+								if let image = image.asUIImage() {
+									ImageCacheService.shared.cacheImage(image: image, id: recipe.id)
+								}
+							}
+					case .failure(_):
+						ZStack(alignment: .center) {
+							imagePlaceholder
+							Text("Error loading image")
+								.font(.inter(.bold, size: 20))
+								.foregroundStyle(Color.black.opacity(0.25))
+						}
+					@unknown default:
+						EmptyView()
+					}
 				}
-			@unknown default:
-				EmptyView()
 			}
 		}
 	}

@@ -28,27 +28,26 @@ class ImageCacheService {
 		if !FileManager.default.fileExists(atPath: path) {
 			do {
 				try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true)
-				print("Folder created")
+				print("Folder created: ", path)
 			} catch let error {
 				print("Error creating folder. \(error)")
 			}
 		}
 	}
 	
-	func saveImage(image: UIImage, id: String) {
-		DispatchQueue.global(qos: .background).async {
-			guard
-				let data = image.jpegData(compressionQuality: 1.0),
-				let path = self.getPathForImage(id: id) else {
-				print("Error saving image")
-				return
-			}
-			
-			do {
-				try data.write(to: path)
-			} catch {
-				print("Error caching image: ", error.localizedDescription)
-			}
+	func cacheImage(image: UIImage, id: String) {
+		guard
+			let data = image.jpegData(compressionQuality: 1.0),
+			let path = self.getPathForImage(id: id) else {
+			print("Error saving image")
+			return
+		}
+		
+		do {
+			try data.write(to: path)
+			print("Image \(id) successfully cached")
+		} catch {
+			print("Error caching image: ", error.localizedDescription)
 		}
 	}
 	
@@ -56,10 +55,10 @@ class ImageCacheService {
 		guard
 			let path = getPathForImage(id: id)?.path,
 			FileManager.default.fileExists(atPath: path) else {
-			print("Error loading image")
+			print("Image \(id) not cached yet")
 			return nil
 		}
-		
+		print("Success loading image \(id)")
 		return UIImage(contentsOfFile: path)
 	}
 	
