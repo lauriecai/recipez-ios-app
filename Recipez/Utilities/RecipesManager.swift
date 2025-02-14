@@ -9,7 +9,7 @@ import Foundation
 
 class RecipeManager {
 	
-	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
 	
 	static func getRecipes() async throws -> [Recipe] {
 		do {

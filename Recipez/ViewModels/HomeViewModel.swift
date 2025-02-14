@@ -12,7 +12,7 @@ import UIKit
 class HomeViewModel: ObservableObject {
 	
 	@Published var recipes: [Recipe] = []
-	@Published var errorMessage: String? = nil
+	@Published var showFeedError: Bool = false
 	
 	init() {
 		Task {
@@ -25,7 +25,7 @@ class HomeViewModel: ObservableObject {
 			let fetchedRecipes = try await RecipeManager.getRecipes()
 			self.recipes = fetchedRecipes
 		} catch {
-			self.errorMessage = "Error loading recipes"
+			self.showFeedError = true
 			print("Error: ", error.localizedDescription)
 		}
 	}}
