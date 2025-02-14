@@ -22,10 +22,10 @@ class HomeViewModel: ObservableObject {
 	
 	func fetchRecipes() async {
 		do {
+			self.showFeedError = false
 			let fetchedRecipes = try await RecipeManager.getRecipes()
 			self.recipes = fetchedRecipes
 		} catch {
 			self.showFeedError = true
-			print("Error: ", error.localizedDescription)
 		}
 	}}
