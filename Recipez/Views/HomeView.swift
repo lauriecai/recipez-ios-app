@@ -27,6 +27,10 @@ struct HomeView: View {
 				}
 			}
 			.navigationTitle("All Recipes")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .topBarTrailing) { refreshButton }
+			}
 		}
 	}
 }
@@ -45,6 +49,19 @@ extension HomeView {
 		}
 		.padding(.top, 10)
 		.padding(.horizontal, 20)
+	}
+	
+	private var refreshButton: some View {
+		Button {
+			Task {
+				await viewModel.fetchRecipes()
+			}
+		} label: {
+			Image(systemName: "arrow.triangle.2.circlepath")
+				.font(.system(size: 16, weight: .bold))
+				.padding(.trailing, 4)
+				.foregroundStyle(Color.theme.textSecondary)
+		}
 	}
 	
 	private var errorMessage: some View {

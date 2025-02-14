@@ -25,6 +25,7 @@ class HomeViewModel: ObservableObject {
 			self.showFeedError = false
 			let fetchedRecipes = try await RecipeManager.getRecipes()
 			self.recipes = fetchedRecipes
+			print("Recipes fetched")
 		} catch {
 			self.showFeedError = true
 		}

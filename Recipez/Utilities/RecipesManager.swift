@@ -38,7 +38,7 @@ class RecipeManager {
 	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json
 	 */
 	
-	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
+	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json"
 	
 	static func getRecipes() async throws -> [Recipe] {
 		do {
