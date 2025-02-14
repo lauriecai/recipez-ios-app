@@ -38,13 +38,16 @@ class RecipeManager {
 	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json
 	 */
 	
-	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json"
+	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
 	
 	static func getRecipes() async throws -> [Recipe] {
+		
+		let recipesData: AllRecipes
+		
 		do {
 			// ensure valid url
-			guard let url = URL(string: urlString)
-			else {
+			guard
+				let url = URL(string: urlString) else {
 				throw RecipeManagerError.invalidURL
 			}
 			
@@ -55,19 +58,24 @@ class RecipeManager {
 			guard
 				!data.isEmpty,
 				let httpResponse = response as? HTTPURLResponse,
-				httpResponse.statusCode >= 200 && httpResponse.statusCode < 300
-			else {
+				httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 else {
 				throw RecipeManagerError.badServerResponse
 			}
 			
 			// decode data into recipes array
 			do {
-				let recipesData = try JSONDecoder().decode(AllRecipes.self, from: data)
-				guard !recipesData.recipes.isEmpty else { throw RecipeManagerError.emptyData }
-				return recipesData.recipes
+				recipesData = try JSONDecoder().decode(AllRecipes.self, from: data)
 			} catch {
 				throw RecipeManagerError.malformedData
 			}
+			
+			// ensure recipes array isn't empty
+			guard
+				!recipesData.recipes.isEmpty else {
+				throw RecipeManagerError.emptyData
+			}
+			
+			return recipesData.recipes
 		} catch let error as RecipeManagerError {
 			print("Error: \(error.localizedDescription)")
 			throw error
