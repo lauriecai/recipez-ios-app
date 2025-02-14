@@ -12,13 +12,21 @@ class HomeViewModel: ObservableObject {
 	
 	@Published var recipes: [Recipe] = []
 	@Published var errorMessage: String? = nil
+	let recipeService = RecipeDataService.shared
+	
+	init() {
+		Task {
+			await fetchRecipes()
+		}
+	}
 	
 	func fetchRecipes() async {
 		do {
-			let fetchedRecipes = try await RecipeDataService.shared.getRecipes()
+			let fetchedRecipes = try await recipeService.getRecipes()
 			self.recipes = fetchedRecipes
 		} catch {
 			self.errorMessage = "Error loading recipes"
+			print("Error: ", error.localizedDescription)
 		}
 	}
 }

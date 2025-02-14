@@ -19,16 +19,10 @@ struct HomeView: View {
 					.frame(maxWidth: .infinity)
 					.aspectRatio(contentMode: .fit)
 				recipesList
-					.onAppear {
-						Task {
-							await viewModel.fetchRecipes()
-						}
-					}
 			}
 			.background(Color.white).ignoresSafeArea()
 			.navigationTitle("All Recipes")
 		}
-		
 	}
 }
 
@@ -39,7 +33,7 @@ struct HomeView: View {
 extension HomeView {
 	
 	private var recipesList: some View {
-		VStack {
+		LazyVStack {
 			ForEach(viewModel.recipes) { recipe in
 				RecipeCardView(recipe: recipe)
 			}
