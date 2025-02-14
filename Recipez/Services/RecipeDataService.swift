@@ -1,5 +1,5 @@
 //
-//  RecipeManager.swift
+//  RecipeDataService.swift
 //  Recipez
 //
 //  Created by Laurie Cai on 2/12/25.
@@ -7,40 +7,32 @@
 
 import Foundation
 
-enum RecipeManagerError: Error, LocalizedError {
-	case invalidURL, badServerResponse, malformedData, emptyData
+class RecipeDataService {
 	
-	var errorDescription: String? {
-		switch self {
-		case .invalidURL:
-			return "Invalid URL"
-		case .badServerResponse:
-			return "Bad server response"
-		case .malformedData:
-			return "Malformed recipes data"
-		case .emptyData:
-		   return "Recipes response empty"
+	let urlString: String
+	
+	init(url: String) {
+		self.urlString = url
+	}
+	
+	enum RecipeManagerError: Error, LocalizedError {
+		case invalidURL, badServerResponse, malformedData, emptyData
+		
+		var errorDescription: String? {
+			switch self {
+			case .invalidURL:
+				return "Invalid URL"
+			case .badServerResponse:
+				return "Bad server response"
+			case .malformedData:
+				return "Malformed recipes data"
+			case .emptyData:
+			   return "Recipes response empty"
+			}
 		}
 	}
-}
-
-class RecipeManager {
 	
-	// Test URLs
-	/*
-	 All recipes:
-	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json
-
-	 Malformed data:
-	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json
-	 
-	 Empty data:
-	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json
-	 */
-	
-	static let urlString = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
-	
-	static func getRecipes() async throws -> [Recipe] {
+	func getRecipes() async throws -> [Recipe] {
 		
 		let recipesData: AllRecipes
 		

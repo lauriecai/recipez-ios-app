@@ -12,7 +12,7 @@ class ImageCacheService {
 	
 	static let shared = ImageCacheService()
 	
-	init() {
+	private init() {
 		createFolderIfNeeded()
 	}
 	

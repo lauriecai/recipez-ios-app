@@ -9,7 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
 	
-	@StateObject private var viewModel = HomeViewModel()
+	@StateObject private var viewModel: HomeViewModel
+	
+	init(recipeDataService: RecipeDataService) {
+		_viewModel = StateObject(wrappedValue: HomeViewModel(recipeDataService: recipeDataService))
+	}
 	
 	var body: some View {
 		NavigationView {
@@ -36,7 +40,8 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+	let recipeDataService = RecipeDataService(url: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
+	HomeView(recipeDataService: recipeDataService)
 }
 
 extension HomeView {
