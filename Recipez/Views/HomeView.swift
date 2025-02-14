@@ -16,7 +16,7 @@ struct HomeView: View {
 			ScrollView(showsIndicators: false) {
 				recipesList
 			}
-			.background(Color.white)
+			.background(Color.theme.backgroundPrimary)
 			.navigationTitle("All Recipes")
 		}
 	}
@@ -29,12 +29,12 @@ struct HomeView: View {
 extension HomeView {
 	
 	private var recipesList: some View {
-		LazyVStack {
+		LazyVStack(spacing: 10) {
 			ForEach(viewModel.recipes) { recipe in
 				RecipeCardView(recipe: recipe)
 			}
 		}
 		.padding(.top, 10)
-		.padding(.horizontal, 10)
+		.padding(.horizontal, 20)
 	}
 }

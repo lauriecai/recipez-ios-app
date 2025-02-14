@@ -15,7 +15,7 @@ struct RecipeCardView: View {
 	let recipe: Recipe
 	
     var body: some View {
-		ZStack(alignment: .bottomLeading) {
+		VStack(alignment: .leading, spacing: 10) {
 			recipeImage
 			if imageLoaded {
 				recipeLabel
@@ -77,23 +77,23 @@ extension RecipeCardView {
 	}
 	
 	private var recipeLabel: some View {
-		VStack(alignment: .leading, spacing: 5) {
+		HStack(alignment: .firstTextBaseline) {
 			Text(recipe.name)
-				.font(.jaro(size: 18))
-				.foregroundStyle(Color.theme.colorTextPrimary)
+				.font(.jaro(size: 20))
+				.foregroundStyle(Color.theme.textPrimary)
+				.lineLimit(2)
+				.truncationMode(.tail)
+			Spacer()
 			HStack(spacing: 8) {
 				Image("icon-location")
 					.renderingMode(.template)
 				Text(recipe.cuisine)
 					.font(.inter(.medium, size: 14))
+					.lineLimit(1)
+					.truncationMode(.tail)
 			}
-			.foregroundStyle(Color.theme.colorAccentDarkYellow)
+			.foregroundStyle(Color.theme.textSecondary)
 		}
-		.padding(.horizontal, 20)
-		.padding(.vertical, 8)
-		.background(Color.theme.colorAccentYellow)
-		.frame(maxWidth: 350, alignment: .leading)
-		.fixedSize(horizontal: false, vertical: true)
 	}
 	
 	private var imagePlaceholder: some View {
