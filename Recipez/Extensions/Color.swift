@@ -13,8 +13,10 @@ extension Color {
 }
 
 struct ColorTheme {
-	let colorTextPrimary = Color("color-text-primary")
-	let colorAccentYellow = Color("color-accent-yellow")
-	let colorAccentDarkYellow = Color("color-accent-dark-yellow")
-	let colorAccentRed = Color("color-accent-red")
+	let textPrimary = Color("color-text-primary")
+	let textSecondary = Color("color-text-secondary")
+	let backgroundPrimary = Color("color-background-primary")
+	let accentYellow = Color("color-accent-yellow")
+	let accentDarkYellow = Color("color-accent-dark-yellow")
+	let accentRed = Color("color-accent-red")
 }
