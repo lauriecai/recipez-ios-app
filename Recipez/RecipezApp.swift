@@ -13,7 +13,7 @@ struct RecipezApp: App {
 	/*
 	 All recipes:
 	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json
-
+	 
 	 Malformed data:
 	 https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json
 	 

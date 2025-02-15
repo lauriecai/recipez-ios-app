@@ -11,7 +11,7 @@ struct HomeView: View {
 	
 	@StateObject private var viewModel: HomeViewModel
 	
-	init(recipeDataService: RecipeDataService) {
+	init(recipeDataService: DataService) {
 		_viewModel = StateObject(wrappedValue: HomeViewModel(recipeDataService: recipeDataService))
 	}
 	
@@ -41,6 +41,7 @@ struct HomeView: View {
 
 #Preview {
 	let recipeDataService = RecipeDataService(url: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")
+	
 	HomeView(recipeDataService: recipeDataService)
 }
 

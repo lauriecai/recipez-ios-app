@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RecipeDataService {
+class RecipeDataService: DataService {
 	
 	let urlString: String
 	

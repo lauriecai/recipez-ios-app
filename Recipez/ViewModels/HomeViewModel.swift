@@ -13,9 +13,9 @@ class HomeViewModel: ObservableObject {
 	
 	@Published var recipes: [Recipe] = []
 	@Published var showFeedError: Bool = false
-	let recipeDataService: RecipeDataService
+	let recipeDataService: DataService
 	
-	init(recipeDataService: RecipeDataService) {
+	init(recipeDataService: DataService) {
 		self.recipeDataService = recipeDataService
 		Task {
 			await fetchRecipes()
