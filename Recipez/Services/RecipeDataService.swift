@@ -15,7 +15,7 @@ class RecipeDataService: DataService {
 		self.urlString = url
 	}
 	
-	enum RecipeManagerError: Error, LocalizedError {
+	enum RecipeDataError: Error, LocalizedError {
 		case invalidURL, badServerResponse, malformedData, emptyData
 		
 		var errorDescription: String? {
@@ -40,7 +40,7 @@ class RecipeDataService: DataService {
 			// ensure valid url
 			guard
 				let url = URL(string: urlString) else {
-				throw RecipeManagerError.invalidURL
+				throw RecipeDataError.invalidURL
 			}
 			
 			// fetch data from url
@@ -51,24 +51,24 @@ class RecipeDataService: DataService {
 				!data.isEmpty,
 				let httpResponse = response as? HTTPURLResponse,
 				httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 else {
-				throw RecipeManagerError.badServerResponse
+				throw RecipeDataError.badServerResponse
 			}
 			
 			// decode data into recipes array
 			do {
 				recipesData = try JSONDecoder().decode(AllRecipes.self, from: data)
 			} catch {
-				throw RecipeManagerError.malformedData
+				throw RecipeDataError.malformedData
 			}
 			
 			// ensure recipes array isn't empty
 			guard
 				!recipesData.recipes.isEmpty else {
-				throw RecipeManagerError.emptyData
+				throw RecipeDataError.emptyData
 			}
 			
 			return recipesData.recipes
-		} catch let error as RecipeManagerError {
+		} catch let error as RecipeDataError {
 			print("Error: \(error.localizedDescription)")
 			throw error
 		}

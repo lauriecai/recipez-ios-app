@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D328A4392D5EA9A3008A8B84 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A4382D5EA9A3008A8B84 /* ImageCacheService.swift */; };
 		D328A43B2D5EDFB7008A8B84 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A43A2D5EDFB5008A8B84 /* Image.swift */; };
+		D328A4612D612F1C008A8B84 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328A4602D612F1C008A8B84 /* DataService.swift */; };
 		D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC02D5C300900E5C85B /* Recipe.swift */; };
 		D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC42D5C300900E5C85B /* HomeViewModel.swift */; };
 		D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFC92D5C300900E5C85B /* RecipezApp.swift */; };
@@ -23,9 +24,21 @@
 		D35AFFE82D5D6CA100E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D328A4562D601F43008A8B84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D35AFF952D5BCF5100E5C85B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D35AFF9C2D5BCF5100E5C85B;
+			remoteInfo = Recipez;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D328A4382D5EA9A3008A8B84 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		D328A43A2D5EDFB5008A8B84 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		D328A4522D601F43008A8B84 /* Recipez_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Recipez_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D328A4602D612F1C008A8B84 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D35AFF9D2D5BCF5100E5C85B /* Recipez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35AFFC02D5C300900E5C85B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D35AFFC22D5C300900E5C85B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -42,7 +55,22 @@
 		D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D328A4532D601F43008A8B84 /* Recipez_Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Recipez_Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		D328A44F2D601F43008A8B84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D35AFF9A2D5BCF5100E5C85B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D328A45F2D612ED2008A8B84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D328A4602D612F1C008A8B84 /* DataService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D35AFF942D5BCF5100E5C85B = {
 			isa = PBXGroup;
 			children = (
 				D35AFFCA2D5C300900E5C85B /* Recipez */,
+				D328A4532D601F43008A8B84 /* Recipez_Tests */,
 				D35AFF9E2D5BCF5100E5C85B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,16 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				D35AFF9D2D5BCF5100E5C85B /* Recipez.app */,
+				D328A4522D601F43008A8B84 /* Recipez_Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D35AFFBF2D5C300900E5C85B /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		D35AFFC12D5C300900E5C85B /* Models */ = {
@@ -105,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D35AFFE52D5D5DD700E5C85B /* HomeView.swift */,
+				D35AFFD12D5C3FD600E5C85B /* RecipeCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,10 +146,10 @@
 				D35AFFC92D5C300900E5C85B /* RecipezApp.swift */,
 				D35AFFDA2D5C5E8600E5C85B /* Extensions */,
 				D35AFFC12D5C300900E5C85B /* Models */,
+				D328A45F2D612ED2008A8B84 /* Protocols */,
 				D35AFFE22D5D347200E5C85B /* Services */,
 				D35AFFC52D5C300900E5C85B /* ViewModels */,
 				D35AFFC72D5C300900E5C85B /* Views */,
-				D35AFFBF2D5C300900E5C85B /* Components */,
 				D35AFFD32D5C5C7D00E5C85B /* Fonts */,
 				D35AFFC82D5C300900E5C85B /* Assets.xcassets */,
 				D35AFFDD2D5C66BF00E5C85B /* Info.plist */,
@@ -158,6 +189,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D328A4512D601F43008A8B84 /* Recipez_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D328A4582D601F43008A8B84 /* Build configuration list for PBXNativeTarget "Recipez_Tests" */;
+			buildPhases = (
+				D328A44E2D601F43008A8B84 /* Sources */,
+				D328A44F2D601F43008A8B84 /* Frameworks */,
+				D328A4502D601F43008A8B84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D328A4572D601F43008A8B84 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D328A4532D601F43008A8B84 /* Recipez_Tests */,
+			);
+			name = Recipez_Tests;
+			packageProductDependencies = (
+			);
+			productName = Recipez_Tests;
+			productReference = D328A4522D601F43008A8B84 /* Recipez_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D35AFF9C2D5BCF5100E5C85B /* Recipez */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D35AFFAB2D5BCF5300E5C85B /* Build configuration list for PBXNativeTarget "Recipez" */;
@@ -187,6 +241,10 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					D328A4512D601F43008A8B84 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = D35AFF9C2D5BCF5100E5C85B;
+					};
 					D35AFF9C2D5BCF5100E5C85B = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -207,11 +265,19 @@
 			projectRoot = "";
 			targets = (
 				D35AFF9C2D5BCF5100E5C85B /* Recipez */,
+				D328A4512D601F43008A8B84 /* Recipez_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D328A4502D601F43008A8B84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D35AFF9B2D5BCF5100E5C85B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,12 +292,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D328A44E2D601F43008A8B84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D35AFF992D5BCF5100E5C85B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D35AFFCB2D5C300900E5C85B /* Recipe.swift in Sources */,
 				D35AFFD22D5C3FD600E5C85B /* RecipeCardView.swift in Sources */,
+				D328A4612D612F1C008A8B84 /* DataService.swift in Sources */,
 				D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */,
 				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
@@ -245,7 +319,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D328A4572D601F43008A8B84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D35AFF9C2D5BCF5100E5C85B /* Recipez */;
+			targetProxy = D328A4562D601F43008A8B84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D328A4592D601F43008A8B84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7YPJCXPNAH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lauriecai.Recipez-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipez";
+			};
+			name = Debug;
+		};
+		D328A45A2D601F43008A8B84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7YPJCXPNAH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "lauriecai.Recipez-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipez";
+			};
+			name = Release;
+		};
 		D35AFFA92D5BCF5300E5C85B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +554,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D328A4582D601F43008A8B84 /* Build configuration list for PBXNativeTarget "Recipez_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D328A4592D601F43008A8B84 /* Debug */,
+				D328A45A2D601F43008A8B84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D35AFF982D5BCF5100E5C85B /* Build configuration list for PBXProject "Recipez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
