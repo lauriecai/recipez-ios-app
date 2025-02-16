@@ -7,18 +7,18 @@
 
 <img src="images/recipez-cover.png" width="50%">
 
-### Summary:
+### Summary
 Recipez is a simple app that displays a list of baked goods from around the world.
-<img src="images/ui/home-feed.png">
+<img src="images/ui/home-feed.png" width="35%">
 
-### Focus Areas: What specific areas of the project did you prioritize?
+### Focus Areas
 I prioritized two things:
 - Designing a good user experience
 - Learning new concepts and best practices associated with writing clean, efficient code
 
 A good user experience is important because we want our users to use the app to address certain needs. When users are confused or become frustrated, they’re unlikely to return.
 
-Learning new concepts and best practices associated with clean, efficient code is important at this stage of my career. Even though going on hour-long tangents to learn something new delayed completion, taking the time to build a solid foundation is an investment into being a better engineer. I spent extra time learning how to cache images, use dependency injection / protocols, and write unit tests.
+Taking the time to build a solid foundation is an investment into being a better engineer. Even though going on hour-long tangents for new concepts delayed completion, I spent extra time learning how to cache images, use dependency injection / protocols, and write unit tests.
 
 ### Time Spent
 This project took 6 days and comprised of the following chunks:
