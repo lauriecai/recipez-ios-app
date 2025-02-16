@@ -40,8 +40,8 @@ When data is fetched, it’s decoded into an array `recipes` of type `[Recipe]`.
 
 `RecipeCardView` is a UI component that accepts a recipe of type `Recipe` and displays the `image`, `title`, and `cuisine` properties. The `image` is conditionally rendered in the UI by first checking if there’s already a cached image of the same ID. If there is, we display the cached image. If not, we fetch and display the image from the URL.
 																																		
-Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.
-<img src="images/ui/recipe-card-states.png" width="80%">
+Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.<br>
+<img src="images/ui/recipe-card-states.png" width="85%">
 
 #### Implement error handling both internally and user-facing
 Handled network request errors by create enum `RecipeDataError` consisting of `invalidURL`, `badServerResponse`, `malformedData`, and `emptyData` and logging them when errors are thrown.
@@ -58,6 +58,10 @@ Both data services conformed to a custom `DataService` protocol which made it ea
 ### Trade-offs and Decisions
 
 ### Weakest Part of the Project
-																																		
+The weakest part of the project would be lack of unit testing for image caching. Prior to this project, I didn’t know what unit tests were nor how to write one.
+
+When writing tests for fetching recipes, I struggled with the abstraction layer of creating a mock service and what it should contain opposed to the actual data service. Ultimately, I was able to figure it out by hard-coding some recipes as well as simulating failure scenarios through an async function without actually fetching data.
+
+When it came to writing tests for caching images, I simply needed more time. Caching images appeared to have an extra layer of complexity due to built-in features associated with FileManager. I needed more time to figure out how to abstract these types of functions without actually saving files to the FileManager. Because I had a self-imposed deadline of a week, it’s something I decided to leave out of the project for now and look into in my own time.
 
 ### Additional Information
