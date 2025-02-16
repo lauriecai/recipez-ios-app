@@ -2,7 +2,7 @@
 
 ### Summary
 Recipez is a simple app that displays a list of baked goods from around the world.
-<img src="images/ui/home-feed.png" width="40%">
+<img src="images/ui/home-feed.png" width="50%">
 
 ### Focus Areas
 I prioritized two things:
@@ -21,9 +21,9 @@ Created a simple user flow in Figma based on given requirements.
 
 #### Define app architecture (MVVM)
 I started with the following:<br>
-**Model:**  `Recipe`<br>
-**View:**  `HomeView` - screen displaying the feed of all recipes<br>
-**ViewModel:**  `HomeViewModel` - all the logic for `HomeView`
+- **Model:**  `Recipe`<br>
+- **View:**  `HomeView` - screen displaying the feed of all recipes<br>
+- **ViewModel:**  `HomeViewModel` - all the logic for `HomeView`
 
 Additional folders that came later include `Extensions`, `Protocols`, `Services`, `Utilities`, and `Components`.
 
@@ -67,7 +67,11 @@ When it came to writing tests for caching images, it appeared to have an extra l
 
 ### Additional Information
 This project gave me a deeper understanding of the following concepts:<br>
+<br>
 **Image caching:** Implemented image caching to reduce unnecessary network calls to improve performance.<br>
+<br>
 **Dependency injection:** Used a protocol-based approach to decouple the data layer, making the code more easily testable.<br>
+<br>
 **Error handling:** Ensured internal errors are logged for better debugging and handled user-facing errors gracefully.<br>
+<br>
 **Unit testing:** Learned how to write unit tests to verify core functionality to improve the app's reliability.<br>
