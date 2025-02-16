@@ -9,11 +9,10 @@
 
 ### Summary:
 Recipez is a simple app that displays a list of baked goods from around the world.
-<img src="images/ui/01-loading-screen.png" width="50%">
-<img src="images/ui/02-home-feed.png" width="50%">
+<img src="images/ui/home-feed.png">
 
 ### Focus Areas: What specific areas of the project did you prioritize?
-For this project, I prioritized two things:
+I prioritized two things:
 - Designing a good user experience
 - Learning new concepts and best practices associated with writing clean, efficient code
 
