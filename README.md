@@ -11,7 +11,7 @@ I prioritized two things:
 
 A good user experience is important because we want our users to use the app to address certain needs. When users are confused or become frustrated, they’re unlikely to return.
 
-Taking the time to build a solid foundation is an investment into being a better engineer. Even though going on hour-long tangents for new concepts delayed completion, I spent extra time learning how to cache images, use dependency injection / protocols, and write unit tests.
+Taking the time to build a solid foundation is an investment into being a better engineer. Even though going on hour-long tangents for new concepts delayed completion, I spent extra time learning how to cache images, use dependency injection / protocols, gracefully handle errors, and write unit tests.
 
 ### Time Spent
 This project took 6 days and comprised of the following chunks:
@@ -39,7 +39,7 @@ Created a data service layer that sits between view model and the database. This
 When data is fetched, it’s decoded into an array `recipes` of type `[Recipe]`. We then iterate over the array to display a list of recipe cards.
 
 `RecipeCardView` is a UI component that accepts a recipe of type `Recipe` and displays the `image`, `title`, and `cuisine` properties. The `image` is conditionally rendered in the UI by first checking if there’s already a cached image of the same ID. If there is, we display the cached image. If not, we fetch and display the image from the URL.
-																																		
+																				
 Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.<br>
 <img src="images/ui/recipe-card-states.png" width="85%">
 
@@ -63,6 +63,11 @@ The weakest part of the project would be lack of unit testing for image caching.
 
 When writing tests for fetching recipes, I struggled with the abstraction layer of creating a mock service and what it should contain opposed to the actual data service. Ultimately, I was able to figure it out by hard-coding some recipes as well as simulating failure scenarios through an async function without actually fetching data.
 
-When it came to writing tests for caching images, it appeared to have an extra layer of complexity due to built-in features associated with FileManager. I needed more time to investigate how to abstract these types of functions without actually saving files to the FileManager. Because I had a self-imposed deadline of a week, it’s something I decided to leave out of the project for now and look into separately.
+When it came to writing tests for caching images, it appeared to have an extra layer of complexity due to built-in features associated with `FileManager`. I needed more time to investigate how to abstract these types of functions without actually saving files to the `FileManager`. Because I had a self-imposed deadline of a week, it’s something I decided to leave out of the project for now and look into separately.
 
 ### Additional Information
+This project gave me a deeper understanding of the following concepts:<br>
+**Image caching:** Implemented image caching to reduce unnecessary network calls to improve performance.<br>
+**Dependency injection:** Used a protocol-based approach to decouple the data layer, making the code more easily testable.<br>
+**Error handling:** Ensured internal errors are logged for better debugging and handled user-facing errors gracefully.<br>
+**Unit testing:** Learned how to write unit tests to verify core functionality to improve the app's reliability.<br>
