@@ -56,12 +56,13 @@ Created a `MockRecipeDataService` with hard-coded data in place of `RecipeDataSe
 Both data services conformed to a custom `DataService` protocol which made it easy to swap between the two data service dependencices.
 
 ### Trade-offs and Decisions
+Many of the trade-offs I made are considered UX nice-to-haves–things like pull down to refresh or have an flashing gray loading state for images. Because I’d need additional time to look into how these are implemented, I decided to leave them out for now.
 
 ### Weakest Part of the Project
 The weakest part of the project would be lack of unit testing for image caching. Prior to this project, I didn’t know what unit tests were nor how to write one.
 
 When writing tests for fetching recipes, I struggled with the abstraction layer of creating a mock service and what it should contain opposed to the actual data service. Ultimately, I was able to figure it out by hard-coding some recipes as well as simulating failure scenarios through an async function without actually fetching data.
 
-When it came to writing tests for caching images, I simply needed more time. Caching images appeared to have an extra layer of complexity due to built-in features associated with FileManager. I needed more time to figure out how to abstract these types of functions without actually saving files to the FileManager. Because I had a self-imposed deadline of a week, it’s something I decided to leave out of the project for now and look into in my own time.
+When it came to writing tests for caching images, it appeared to have an extra layer of complexity due to built-in features associated with FileManager. I needed more time to investigate how to abstract these types of functions without actually saving files to the FileManager. Because I had a self-imposed deadline of a week, it’s something I decided to leave out of the project for now and look into separately.
 
 ### Additional Information
