@@ -38,8 +38,9 @@ extension RecipeCardView {
 			if let cachedImage = ImageCacheService.shared.loadImage(id: recipe.id) {
 				Image(uiImage: cachedImage)
 					.resizable()
-					.aspectRatio(1, contentMode: .fit)
+					.scaledToFit()
 					.frame(maxWidth: .infinity)
+//					.aspectRatio(1, contentMode: .fit)
 					.cornerRadius(20)
 					.onAppear {
 						imageLoaded = true
@@ -52,8 +53,9 @@ extension RecipeCardView {
 					case .success(let image):
 						image
 							.resizable()
-							.aspectRatio(1, contentMode: .fit)
+							.scaledToFit()
 							.frame(maxWidth: .infinity)
+//							.aspectRatio(contentMode: .fit)
 							.cornerRadius(20)
 							.onAppear {
 								imageLoaded = true
