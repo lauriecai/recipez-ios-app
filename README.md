@@ -43,7 +43,7 @@ This project took 6 days and comprised of the following chunks:
 >When data is fetched, it’s decoded into an array `recipes` of type `[Recipe]`. We then iterate over the array to display a list of recipe cards.
 >
 >`RecipeCardView` is a UI component that accepts a recipe of type `Recipe` and displays the `image`, `title`, and `cuisine` properties. The `image` is conditionally rendered in the UI by first checking if there’s already a cached image of the same ID. If there is, we display the cached image. If not, we fetch and display the image from the URL.
-																				
+>
 >Because `AsyncImage` renders the image, there's both a loading and error state.
 ><br>
 ><img src="images/ui/recipe-card-states.png" width="88%">
