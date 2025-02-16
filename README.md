@@ -1,15 +1,8 @@
-//
-//  README.md
-//  Recipez
-//
-//  Created by Laurie Cai on 2/15/25.
-//
-
 <img src="images/recipez-cover.png" width="50%">
 
 ### Summary
 Recipez is a simple app that displays a list of baked goods from around the world.
-<img src="images/ui/home-feed.png" width="35%">
+<img src="images/ui/home-feed.png" width="40%">
 
 ### Focus Areas
 I prioritized two things:
@@ -27,9 +20,9 @@ This project took 6 days and comprised of the following chunks:
 Created a simple user flow in Figma based on given requirements.
 
 #### Define app architecture (MVVM)
-I started with the following:
-**Model:**  `Recipe`
-**View:**  `HomeView` - screen displaying the feed of all recipes
+I started with the following:<br>
+**Model:**  `Recipe`<br>
+**View:**  `HomeView` - screen displaying the feed of all recipes<br>
 **ViewModel:**  `HomeViewModel` - all the logic for `HomeView`
 
 Additional folders that came later include `Extensions`, `Protocols`, `Services`, `Utilities`, and `Components`.
@@ -46,6 +39,9 @@ Created a data service layer that sits between view model and the database. This
 When data is fetched, it’s decoded into an array `recipes` of type `[Recipe]`. We then iterate over the array to display a list of recipe cards.
 
 `RecipeCardView` is a UI component that accepts a recipe of type `Recipe` and displays the `image`, `title`, and `cuisine` properties. The `image` is conditionally rendered in the UI by first checking if there’s already a cached image of the same ID. If there is, we display the cached image. If not, we fetch and display the image from the URL.
+																																		
+																																		Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.
+<img src="images/ui/recipe-card-states.png" width="40%">
 
 #### Implement error handling both internally and user-facing
 Handled network request errors by create enum `RecipeDataError` consisting of `invalidURL`, `badServerResponse`, `malformedData`, and `emptyData` and logging them when errors are thrown.
@@ -62,5 +58,6 @@ Both data services conformed to a custom `DataService` protocol which made it ea
 ### Trade-offs and Decisions
 
 ### Weakest Part of the Project
+																																		
 
 ### Additional Information

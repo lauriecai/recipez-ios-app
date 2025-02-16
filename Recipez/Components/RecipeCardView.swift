@@ -40,7 +40,6 @@ extension RecipeCardView {
 					.resizable()
 					.scaledToFit()
 					.frame(maxWidth: .infinity)
-//					.aspectRatio(1, contentMode: .fit)
 					.cornerRadius(20)
 					.onAppear {
 						imageLoaded = true
@@ -55,7 +54,6 @@ extension RecipeCardView {
 							.resizable()
 							.scaledToFit()
 							.frame(maxWidth: .infinity)
-//							.aspectRatio(contentMode: .fit)
 							.cornerRadius(20)
 							.onAppear {
 								imageLoaded = true
