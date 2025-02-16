@@ -40,8 +40,8 @@ When data is fetched, it’s decoded into an array `recipes` of type `[Recipe]`.
 
 `RecipeCardView` is a UI component that accepts a recipe of type `Recipe` and displays the `image`, `title`, and `cuisine` properties. The `image` is conditionally rendered in the UI by first checking if there’s already a cached image of the same ID. If there is, we display the cached image. If not, we fetch and display the image from the URL.
 																																		
-																																		Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.
-<img src="images/ui/recipe-card-states.png" width="40%">
+Because we're using `AsyncImage` to render the image, there's a loading state as well as error for when we're not able to obtain an image.
+<img src="images/ui/recipe-card-states.png" width="80%">
 
 #### Implement error handling both internally and user-facing
 Handled network request errors by create enum `RecipeDataError` consisting of `invalidURL`, `badServerResponse`, `malformedData`, and `emptyData` and logging them when errors are thrown.
