@@ -23,6 +23,7 @@
 		D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFFE52D5D5DD700E5C85B /* HomeView.swift */; };
 		D35AFFE82D5D6CA100E5C85B /* Jaro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */; };
 		D375A22E2D614AFF001A4295 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D375A22D2D614AF9001A4295 /* README.md */; };
+		D3D273222D70E477004A43B7 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = D3D273212D70E46F004A43B7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D35AFFE52D5D5DD700E5C85B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D35AFFE72D5D6CA100E5C85B /* Jaro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaro-Regular.ttf"; sourceTree = "<group>"; };
 		D375A22D2D614AF9001A4295 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D3D273212D70E46F004A43B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D375A22D2D614AF9001A4295 /* README.md */,
+				D3D273212D70E46F004A43B7 /* .gitignore */,
 				D35AFFCA2D5C300900E5C85B /* Recipez */,
 				D328A4532D601F43008A8B84 /* Recipez_Tests */,
 				D35AFF9E2D5BCF5100E5C85B /* Products */,
@@ -321,6 +324,7 @@
 				D35AFFE12D5C754F00E5C85B /* Color.swift in Sources */,
 				D35AFFDC2D5C5E9E00E5C85B /* Font.swift in Sources */,
 				D35AFFCC2D5C300900E5C85B /* HomeViewModel.swift in Sources */,
+				D3D273222D70E477004A43B7 /* .gitignore in Sources */,
 				D35AFFE62D5D5DD700E5C85B /* HomeView.swift in Sources */,
 				D35AFFE42D5D34AA00E5C85B /* RecipeDataService.swift in Sources */,
 				D35AFFCE2D5C300900E5C85B /* RecipezApp.swift in Sources */,

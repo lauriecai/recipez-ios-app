@@ -1,0 +1,41 @@
+# macOS system files
+.DS_Store
+
+# Xcode build and derived data
+DerivedData/
+Build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Xcode project/workspace settings
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+/.swiftpm
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Ignore build artifacts
+*.o
+*.d
+*.out
+*.xcarchive
